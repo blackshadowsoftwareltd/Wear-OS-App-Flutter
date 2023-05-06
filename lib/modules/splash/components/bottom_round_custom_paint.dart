@@ -1,10 +1,48 @@
 import 'package:flutter/material.dart';
+import '/modules/constants/duration/duration.dart' show duration800;
+import '/modules/utils/size_config.dart' show ScreenSize;
 
-class BottomRoundCustomPaint extends CustomPainter {
+class BottomRound extends StatelessWidget {
+  const BottomRound({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      duration: duration800,
+      tween: Tween<double>(begin: 0, end: 1),
+      curve: Curves.easeInOutBack,
+      builder: (context, double v, child) {
+        return Transform.translate(
+            offset: Offset(
+                0, -(v * ScreenSize.height * .15) + ScreenSize.height * .15),
+            child: Opacity(
+                opacity: v < .05
+                    ? 0
+                    : v > 1
+                        ? 1
+                        : v,
+                child: child!));
+      },
+      child: SizedBox(
+        width: ScreenSize.width * .7,
+        height: ScreenSize.width * .7,
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: CustomPaint(
+            size: Size(ScreenSize.width * .7, ScreenSize.width * .35),
+            painter: _BottomRoundCustomPaint(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _BottomRoundCustomPaint extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint0 = Paint()
-      ..color = const Color.fromARGB(255, 71, 71, 71)
+      ..color = Colors.grey.shade800
       ..style = PaintingStyle.fill
       ..strokeWidth = 1;
 

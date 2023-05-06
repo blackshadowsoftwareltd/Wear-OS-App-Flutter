@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import '/modules/utils/size_config.dart' show ScreenSize;
 
-import 'components/bottom_round_custom_paint.dart';
+import 'components/black.dart' show BlackTxt;
+import 'components/bottom_round_custom_paint.dart' show BottomRound;
+import 'components/shadow.dart' show ShadowTxt;
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -8,11 +11,18 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: CustomPaint(
-        size: const Size(100, 70),
-        painter: BottomRoundCustomPaint(),
-      )),
+      body: SizedBox(
+        width: ScreenSize.width,
+        height: ScreenSize.height,
+        child: Stack(
+          alignment: Alignment.center,
+          children: const [
+            BottomRound(),
+            BlackTxt(),
+            ShadowTxt(),
+          ],
+        ),
+      ),
     );
   }
 }

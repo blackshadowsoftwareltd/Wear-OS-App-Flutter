@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '/modules/constants/duration/duration.dart' show duration1;
-import '/modules/utils/size_config.dart' show ScreenSize;
+import '../../../helper/constants/duration/duration.dart' show duration1;
+import '../../../helper/utils/size_config.dart' show ScreenSize;
 
 class ShadowTxt extends StatelessWidget {
   const ShadowTxt({super.key});

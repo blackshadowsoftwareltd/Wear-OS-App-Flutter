@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart' show ProviderScope;
 
-import 'modules/run/start.dart' show StartApp;
+import 'src/modules/run/start.dart' show StartApp;
 
 void main() {
   runApp(const ProviderScope(

@@ -14,9 +14,9 @@ class SplashScreen extends StatelessWidget {
       body: SizedBox(
         width: ScreenSize.width,
         height: ScreenSize.height,
-        child: Stack(
+        child:const Stack(
           alignment: Alignment.center,
-          children: const [
+          children:  [
             BottomRound(),
             BlackTxt(),
             ShadowTxt(),

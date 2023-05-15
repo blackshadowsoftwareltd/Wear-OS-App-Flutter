@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/modules/utils/size_config.dart' show ScreenSize;
+import '../../helper/utils/size_config.dart' show ScreenSize;
 
 import 'components/black.dart' show BlackTxt;
 import 'components/bottom_round_custom_paint.dart' show BottomRound;

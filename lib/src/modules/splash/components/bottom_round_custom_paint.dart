@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '/modules/constants/duration/duration.dart' show duration800;
-import '/modules/utils/size_config.dart' show ScreenSize;
+import '../../../helper/constants/duration/duration.dart' show duration800;
+import '../../../helper/utils/size_config.dart' show ScreenSize;
 
 class BottomRound extends StatelessWidget {
   const BottomRound({super.key});

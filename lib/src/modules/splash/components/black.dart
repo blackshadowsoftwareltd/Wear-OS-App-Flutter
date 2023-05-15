@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '/modules/constants/duration/duration.dart' show  duration1200;
-import '/modules/utils/size_config.dart' show ScreenSize;
+import '../../../helper/constants/duration/duration.dart' show duration1200;
+import '../../../helper/utils/size_config.dart' show ScreenSize;
 
 class BlackTxt extends StatelessWidget {
   const BlackTxt({super.key});

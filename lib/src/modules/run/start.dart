@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart'
     show ConsumerWidget, WidgetRef;
 import 'package:wear/wear.dart' show AmbientMode, WatchShape, WearShape;
+import '/src/modules/tic_tac_toe/tic_tac_toe.dart' show TicTacToeScreen;
 import '../../helper/utils/size_config.dart' show ScreenSize;
-import '/src/modules/splash/splash.dart' show SplashScreen;
 
 // import '../home/home.dart' show HomeScreen;
 import 'providers/provider.dart' show ambientMoodProvider, deviceShapeProvider;
@@ -19,8 +19,9 @@ class StartApp extends ConsumerWidget {
         ref.read(deviceShapeProvider.notifier).update(shape);
         return AmbientMode(builder: (context, mood, _) {
           ref.read(ambientMoodProvider.notifier).update(mood);
-          // return const HomeScreen();
-          return const SplashScreen();
+          // return const DeviceInfoScreen();
+          // return const SplashScreen();
+          return const TicTacToeScreen();
         });
       },
     );

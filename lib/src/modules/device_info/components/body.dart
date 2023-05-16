@@ -5,8 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart'
 import '../../run/providers/provider.dart'
     show ambientMoodProvider, deviceShapeProvider, rotarProvider;
 
-class HomeBody extends ConsumerWidget {
-  const HomeBody({super.key});
+class DeviceInfoBody extends ConsumerWidget {
+  const DeviceInfoBody({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
